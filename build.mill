@@ -1,0 +1,13 @@
+package build
+
+import mill._
+import mill.scalajslib._
+import mill.scalajslib.api._
+import mill.scalalib._
+
+object web extends ScalaJSModule {
+    override def scalaVersion = "3.5.0"
+    override def scalaJSVersion = "1.17.0"
+    override def moduleSplitStyle = ModuleSplitStyle.SmallModulesFor(List("test"))
+    override def moduleKind       = ModuleKind.ESModule
+}
